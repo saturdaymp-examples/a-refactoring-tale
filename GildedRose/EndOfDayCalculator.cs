@@ -8,7 +8,7 @@ public static class EndOfDayCalculator
 
     public static void Update(Item item)
     {
-        if (item.Name == "Conjured Mana Cake")
+        if (IsConjured(item))
         {
             UpdateConjured(item);
         }
@@ -16,6 +16,12 @@ public static class EndOfDayCalculator
         {
             UpdateNormalBrieBackstageSulfuras(item);
         }
+    }
+
+    private static bool IsConjured(Item item)
+    {
+        const string conjuredManaCake = "Conjured Mana Cake";
+        return item.Name == conjuredManaCake;
     }
 
     private static void UpdateNormalBrieBackstageSulfuras(Item item)
