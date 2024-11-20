@@ -10,24 +10,16 @@ public static class EndOfDayCalculator
     {
         if (item.Name == "Conjured Mana Cake")
         {
-            item.SellIn -= 1;
-            if (item.SellIn >= 0)
-            {
-                item.Quality -= 2;
-            }
-            else
-            {
-                item.Quality -= 4;
-            }
-
-            if (item.Quality < 0)
-            {
-                item.Quality = 0;
-            }
-
-            return;
+            UpdateConjured(item);
         }
-        
+        else
+        {
+            UpdateNormalBrieBackstageSulfuras(item);
+        }
+    }
+
+    private static void UpdateNormalBrieBackstageSulfuras(Item item)
+    {
         if (item.Name != AgedBrie && item.Name != BackstagePassesATafkal80Etc)
         {
             if (item.Quality > 0)
@@ -96,6 +88,24 @@ public static class EndOfDayCalculator
                     item.Quality += 1;
                 }
             }
+        }
+    }
+
+    private static void UpdateConjured(Item item)
+    {
+        item.SellIn -= 1;
+        if (item.SellIn >= 0)
+        {
+            item.Quality -= 2;
+        }
+        else
+        {
+            item.Quality -= 4;
+        }
+
+        if (item.Quality < 0)
+        {
+            item.Quality = 0;
         }
     }
 }
