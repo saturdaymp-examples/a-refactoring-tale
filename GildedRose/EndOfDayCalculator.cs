@@ -8,6 +8,26 @@ public static class EndOfDayCalculator
 
     public static void Update(Item item)
     {
+        if (item.Name == "Conjured Mana Cake")
+        {
+            item.SellIn -= 1;
+            if (item.SellIn >= 0)
+            {
+                item.Quality -= 2;
+            }
+            else
+            {
+                item.Quality -= 4;
+            }
+
+            if (item.Quality < 0)
+            {
+                item.Quality = 0;
+            }
+
+            return;
+        }
+        
         if (item.Name != AgedBrie && item.Name != BackstagePassesATafkal80Etc)
         {
             if (item.Quality > 0)

@@ -24,4 +24,24 @@ public class EndOfDayCalculatorTests
         Assert.That(testItem.SellIn, Is.EqualTo(-1));
         Assert.That(testItem.Quality, Is.EqualTo(8));
     }
+    
+    [Test]
+    public void Update_ConjuredItemBeforeSellDate()
+    {
+        var testItem = new Item { Name = "Conjured Mana Cake", SellIn = 1, Quality = 10 };
+        EndOfDayCalculator.Update(testItem);
+        
+        Assert.That(testItem.SellIn, Is.EqualTo(0));
+        Assert.That(testItem.Quality, Is.EqualTo(8));
+    }
+    
+    [Test]
+    public void Update_ConjuredItemAfterSellDate()
+    {
+        var testItem = new Item { Name = "Conjured Mana Cake", SellIn = 0, Quality = 10 };
+        EndOfDayCalculator.Update(testItem);
+        
+        Assert.That(testItem.SellIn, Is.EqualTo(-1));
+        Assert.That(testItem.Quality, Is.EqualTo(6));
+    }
 }
