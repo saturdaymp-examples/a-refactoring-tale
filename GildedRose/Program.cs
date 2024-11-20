@@ -34,8 +34,10 @@ public class Program
                 SellIn = 5,
                 Quality = 49
             },
-            // this conjured item does not work properly yet
-            //new Item {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6}
+            // The original mana cake and one that reaches it SellIn date
+            // before the quality is zero.
+            new Item {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6},
+            new Item {Name = "Conjured Mana Cake", SellIn = 5, Quality = 20}
         };
 
         var app = new GildedRose(items);
