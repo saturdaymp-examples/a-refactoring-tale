@@ -8,7 +8,7 @@ public class GildedRose(IList<Item> items)
     {
         foreach (var item in items)
         {
-            ItemUpdater.UpdateItem(item);
+            EndOfDayCalculator.Update(item);
         }
     }
 }
