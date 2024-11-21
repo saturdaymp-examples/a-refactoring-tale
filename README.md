@@ -7,6 +7,8 @@ Learn when and how to refactor in this hands-on presentation as we follow our he
 
 ## Gilded Rose starting position in C# NUnit
 
+First off, read the [requirements](requirements.md).  Then build the project and run it along with the tests.  Finally start refactoring!  Open an [issue](https://github.com/saturdaymp-examples/a-refactoring-tale/issues) if you have trouble getting the project running.
+
 ### Build the project
 
 Use your normal build tools to build the projects in Debug mode.
