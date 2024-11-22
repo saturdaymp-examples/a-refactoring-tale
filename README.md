@@ -3,7 +3,9 @@
 Our tale begins at the Gilded Rose, a small inn with a prime location in a prominent city run by a friendly innkeeper named Allison.  This quant inn sells a limited range of high-quality goods such as Aged Brie, Sulfuras, and concert tickets.
 Our unassuming hero developer has been hired to update the inn’s inventory system so Allison can sell conjured items.  A simple task, or so it seems.  Little does our hero know the perils and smells that await them in the rotten inventory source code.
 
-Learn when and how to refactor in this hands-on presentation as we follow our hero through their refactoring journey of the famous Gilded Rose Kata.
+Learn when and how to refactor in this hands-on presentation as we follow our hero through their refactoring journey of the famous Gilded Rose Kata.  You can find a video of the presentation at:
+
+https://youtu.be/0bTbXpXUhmk
 
 ## Gilded Rose starting position in C# NUnit
 
